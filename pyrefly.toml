@@ -1,0 +1,29 @@
+###### configuring what to type check and where to import from
+
+project-includes = ["**/*.py"]
+project-excludes = [
+  "**/node_modules",
+  "**/__pycache__",
+  "**/*venv/**",
+  "**/.[!/.]*/**",
+  "**/dist/**",
+  "**/build/**",
+]
+use-ignore-files = true
+search-path = ["."]
+disable-search-path-heuristics = false
+
+###### configuring your python environment
+
+skip-interpreter-query = false  # let pyrefly query the active venv
+
+###### configuring type check settings
+
+replace-imports-with-any = []
+ignore-missing-imports = []
+ignore-errors-in-generated-code = false
+untyped-def-behavior = "check-and-infer-return-type"
+permissive-ignores = false
+
+[errors]
+# all errors enabled by default
